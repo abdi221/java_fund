@@ -3,12 +3,22 @@
  */
 package random_exercises;
 
+import java.util.Scanner;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+
+    Person person = new Person(null, 0);
+    Scanner scan = new Scanner(System.in);
+    public void thePerson() {
+        System.out.println("Enter your name:");
+        scan.nextLine();
+        System.out.println("Enter your PersonID");
+        scan.nextInt();
+        System.out.println(person.getName() + person.getPersonID());
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        app.thePerson();
     }
 }
